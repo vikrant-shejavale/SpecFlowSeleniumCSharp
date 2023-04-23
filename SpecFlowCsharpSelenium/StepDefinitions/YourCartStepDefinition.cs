@@ -14,7 +14,10 @@ namespace SpecFlowCsharpSelenium.StepDefinitions
         private By grandTotal = By.XPath("//tr[@class='grand totals']//span[@class='price']");
         private By proceedToCheckout = By.XPath("//button[@title='Proceed to Checkout']");
         private String editItemQty = "//input[@title='Quantity'][{0}]";
-        private String grandTotalprice;
+        private String grandTotalprice="";
+        public YourCartStepDefinition(IWebDriver driver) : base(driver)
+        {
+        }
 
         [When(@"I change quatity for (.*)(st|nd|rd|th) item in cart to (.*)")]
         public void WhenIChangeQuatityForStItemInCartTo(int item, String suffix, int qty)

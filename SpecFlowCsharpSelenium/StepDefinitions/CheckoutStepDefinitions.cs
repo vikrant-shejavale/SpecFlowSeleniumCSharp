@@ -17,6 +17,12 @@ namespace SpecFlowCsharpSelenium.StepDefinitions
         private By ShippingPrice = By.XPath("//span[@data-th=\"Shipping\"]");
         private String shippingMethodLocator = "//td[contains(text(),'{0}')]/preceding-sibling::td/input";
         private String shippingPriceValue;
+
+        public CheckoutStepDefinitions(IWebDriver driver): base(driver)
+        {
+
+        }
+        
         [Then(@"I navigate to Checkout page")]
         public void ThenINavigateToCheckoutPage()
         {

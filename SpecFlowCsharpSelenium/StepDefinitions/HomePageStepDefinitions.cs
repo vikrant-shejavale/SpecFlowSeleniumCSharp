@@ -20,7 +20,9 @@ namespace SpecFlowCsharpSelenium.StepDefinitions
         private String removeItem = "//a[@title='Remove item']/Span[text()='Remove'][{0}]";
         private String removeItemPopUp = "//button[contains(@class,'action-')]/span[text()='{0}']";
         
-
+        public HomePageStepDefinitions(IWebDriver driver): base(driver)
+        { 
+        }
 
 
         [Then(@"New window with title ""([^""]*)"" opened")]
